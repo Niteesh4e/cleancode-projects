@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="palindrome.css">
+</head>
+<body>
+    <div class="box">
+        <h1 class="title"> Palindrome Checker</h1>
+        <div class="input">
+            <input type="text" id="ip" placeholder="enter a word">
+            <button id="btn"> Check </button>
+        </div>
+     <p id="result" class="right">Check Box</p>
+    </div>
+</body>
+</html>
+<script>
+    let btn=document.getElementById("btn");
+    let input=document.getElementById("ip");
+    let result=document.getElementById("result");
+
+    btn.addEventListener("click",()=>{
+        let text=input.value.trim();
+        if(text.length==0){
+            alert("Please Enter Word");
+            return;
+        }
+        let clntxt=text.replace(/[^a-zA-Z0-9]/g,"").toLowerCase();
+
+       let ispal=clntxt===text.split("").reverse("").join("");
+       let message=ispal ? `<span>yes it is palindrome` :`<span>nope not a palindrome`;
+
+result.innerHTML=message
+    });
+
+</script>

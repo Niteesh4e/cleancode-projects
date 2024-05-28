@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess My Number</title>
+  <link rel="stylesheet" href="numbergame.css">
+</head>
+<body>
+  <h1>Guess My Number Game</h1>
+  <p>Guess a number between <span id="min">1</span> and <span id="max">10</span></p>
+  <input type="number" id="guessField">
+  <button onclick="checkGuess()">Submit Guess</button>
+  <p class="message" id="message"></p>
+
+  <script >
+    // Generate a random number between min and max
+const min = 1;
+const max = 10;
+const winningNumber = getRandomNumber(min, max);
+
+// UI Elements
+const guessField = document.getElementById('guessField');
+const guessSubmit = document.querySelector('button');
+const message = document.getElementById('message');
+const minSpan = document.getElementById('min');
+const maxSpan = document.getElementById('max');
+
+minSpan.textContent = min;
+maxSpan.textContent = max;
+
+let guessesLeft = 10;
+
+// Event listener for guess submission
+guessSubmit.addEventListener('click', function() {
+  const guess = parseInt(guessField.value);
+  validateGuess(guess);
+});
+
+// Function to validate the guess
+function validateGuess(guess) {
+  if (isNaN(guess) || guess < min || guess > max) {
+    setMessage(`Please enter a number between ${min} and ${max}`, 'red');
+  } else {
+    guessesLeft--;
+    if (guess === winningNumber) {
+      gameOver(true, `${winningNumber} is correct! You win!`);
+    } else {
+      if (guessesLeft === 0) {
+        gameOver(false, `Game Over. The correct number was ${winningNumber}`);
+      } else {
+        const direction = guess < winningNumber ? 'higher' : 'lower';
+        setMessage(`Incorrect guess. Try a ${direction} number.`, 'blue');
+      }
+    }
+  }
+  guessField.value = '';
+}
+
+// Function to end the game
+function gameOver(won, msg) {
+  const color = won ? 'green' : 'red';
+  guessField.disabled = true;
+  guessField.style.borderColor = color;
+  message.style.color = color;
+  setMessage(msg);
+
+  // Disable submit button
+  guessSubmit.disabled = true;
+}
+
+// Function to set message
+function setMessage(msg, color) {
+  message.style.color = color;
+  message.textContent = msg;
+}
+
+// Function to generate random number
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random())*10 + 1;
+}
+
+  </script>
+</body>
+</html>

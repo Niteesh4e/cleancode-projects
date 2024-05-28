@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  h1 {
+   background: url(https://c4.wallpaperflare.com/wallpaper/647/478/510/simple-simple-background-minimalism-abstract-wallpaper-preview.jpg) 0 0 / cover no-repeat;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+  }
+  p{
+    background: url(https://e0.pxfuel.com/wallpapers/975/533/desktop-wallpaper-paper-walls-neon-plants-iphone-phone-galaxy-cool-neon-phone-thumbnail.jpg) 0 0 / cover no-repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  button {
+    padding: 8px 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    
+  }
+  
+  .message {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-bottom-color: blue;}

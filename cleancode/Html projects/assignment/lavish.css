@@ -1,0 +1,43 @@
+#navbar{
+    display: flex;
+    height: 150px;
+    width: 100%;
+    border: 0px solid black;
+}
+#pic{
+    height: 120px;
+    width: 120px;
+    border: 0px solid black;
+    margin-left: 7%;
+}
+.nav{
+    display: flex;
+    height: 140px;
+    width: 100vh;
+    border: 0px solid black;
+    font-size: 16px;
+    margin-left: 150px;
+}
+.nav a:hover{
+    color: #39c2f1;
+}
+.nav a {
+    height:90px ;
+    width: 120px;
+    padding-top: 30px;
+    color: #0f0505;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    gap: 10px;
+    font-family: sans-serif;
+    border: 0px solid red;
+}
+.contact { 
+    height: 100px;
+    width: 200px;
+    display: flex;
+    border: 0px solid red;
+  margin-left: 200px;
+  padding-top: 20px;
+}

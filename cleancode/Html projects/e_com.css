@@ -1,0 +1,18 @@
+/*button{
+    size: 1px;
+    float: right;
+}*/
+.search-container {
+    margin-top: auto;
+    padding-bottom: 30px;
+   
+  }
+#navbarText{
+
+    font-size: 35px;
+    justify-content:space-evenly;
+}
+.navbar-brand{
+    font-size: 35px;
+}
+

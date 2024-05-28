@@ -1,0 +1,25 @@
+#pic{
+    height: 100vh;
+    width: 100%;
+    border: 1px solid black;
+    background-image: url(https://images4.alphacoders.com/866/86638.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#options{
+    height: 90vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,50vh);
+    grid-template-rows: repeat(3,40vh);
+    border: 0px solid black;
+    margin-top: 20px;
+    text-align: center;
+    gap: 20px;
+
+    justify-content: space-evenly}
+.pics{
+    border: 0px solid black;
+    border-radius: 5px;
+    
+}

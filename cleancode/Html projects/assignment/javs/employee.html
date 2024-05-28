@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main{height: 100vh;
+        width: 100%;
+display: grid;
+grid-gap: 20px;
+
+
+grid-template-columns: 200px 200px 200px 200px 200px 200px 200px;
+        border: 0px solid black;
+        
+        flex-wrap: wrap;
+       
+
+    }
+    #main>div{
+        height: 200px;
+        width: 185px;
+        border: 1px solid red;
+        background:#fef8dd;
+        border-radius: 10px;
+    }
+    h1{
+        background: linear-gradient(to right, #30cfd0 0%, #330867 70% ,#8928ff 100%);
+        background-clip: text;
+        color: transparent;
+    }
+
+</style>
+<body>
+    <div id="main"></div>
+</body>
+</html>
+
+<script src="loops.js"></script>

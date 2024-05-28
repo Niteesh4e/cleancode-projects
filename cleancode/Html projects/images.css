@@ -1,0 +1,28 @@
+#img{
+    height:700px;
+    width:1500px;
+    border: 1px solid black;
+    background-color: rgb(255, 208, 0);
+   
+}
+#img > div{
+    height: 800px;
+    width: 800px;
+    margin-left: 450px;
+    margin-top: 150px;
+    background-image: url(https://render.fineartamerica.com/images/rendered/default/poster/8/6/break/images-medium-5/breaking-bad-paul-meijering.jpg);
+   background-repeat: no-repeat;
+   background-size: 600px;
+  
+   
+  
+    
+    }
+h1{
+    opacity: 0.6;
+    margin-left: 150px;
+    font-size: 40px;
+    font-weight:900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(0, 8, 255);
+}

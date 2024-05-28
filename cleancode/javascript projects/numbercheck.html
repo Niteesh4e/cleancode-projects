@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="numbercheck.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Phone Number Validation</h2>
+        <form id="phoneForm">
+            <label for="phoneNumber">Enter Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber">
+            <button type="submit">Submit</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        document.getElementById('phoneForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var phoneNumber = document.getElementById('phoneNumber').value;
+    var message = document.getElementById('message');
+    var phoneRegex = /^\d{10}$/;
+
+    if (phoneRegex.test(phoneNumber)) {
+        message.textContent = 'Phone number is valid!';
+        message.style.color = 'green';
+    } else {
+        message.textContent = 'Please enter a valid 10-digit phone number';
+        message.style.color = 'red';
+    }
+});
+
+    </script>
+</body>
+</html>

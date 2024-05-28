@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roman Numeral Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    #container {
+      text-align: center;
+    }
+
+    input[type="number"] {
+      padding: 5px;
+    }
+
+    button {
+      padding: 5px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h2>Roman Numeral Converter</h2>
+    <input type="text" id="decimalInput" placeholder="Enter a number">
+    <button onclick="convertToRoman()">Convert</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function convertToRoman() {
+      var decimalNumber = parseInt(document.getElementById('decimalInput').value);
+      var romanNumeral = '';
+
+      var romanNumeralsMap = [
+        { value: 1000, numeral: 'M' },
+        { value: 900, numeral: 'CM' },
+        { value: 500, numeral: 'D' },
+        { value: 400, numeral: 'CD' },
+        { value: 100, numeral: 'C' },
+        { value: 90, numeral: 'XC' },
+        { value: 50, numeral: 'L' },
+        { value: 40, numeral: 'XL' },
+        { value: 10, numeral: 'X' },
+        { value: 9, numeral: 'IX' },
+        { value: 5, numeral: 'V' },
+        { value: 4, numeral: 'IV' },
+        { value: 1, numeral: 'I' }
+      ];
+
+      for (var i = 0; i < romanNumeralsMap.length; i++) {
+        while (decimalNumber >= romanNumeralsMap[i].value) {
+          romanNumeral += romanNumeralsMap[i].numeral;
+          decimalNumber -= romanNumeralsMap[i].value;
+        }
+      }
+
+      document.getElementById('result').innerText = 'Roman Numeral: ' + romanNumeral;
+    }
+  </script>
+</body>
+</html>

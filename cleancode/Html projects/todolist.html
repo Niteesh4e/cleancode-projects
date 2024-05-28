@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static To-Do List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .todo-container {
+            background-color: white;
+            width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .todo-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .todo-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .todo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid white;
+        }
+
+        .todo-item:last-child {
+            border-bottom: none;
+        }
+
+        .todo-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .todo-complete {
+            color: #28a745;
+        }
+
+        .todo-delete {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="todo-container">
+    <h2 class="todo-header">To-Do List</h2>
+
+    <ul class="todo-list">
+        <li class="todo-item">
+            Task 1
+            <div class="todo-actions">
+                <span class="todo-complete">complete</span>
+                <span class="todo-delete">incomplete</span>
+            </div>
+        </li>
+        <li class="todo-item">
+            Task 2
+            <div class="todo-actions">
+                <span class="todo-complete">complete</span>
+                <span class="todo-delete">incomplete</span>
+            </div>
+        </li>
+        <li class="todo-item">
+            Task 3
+            <div class="todo-actions">
+                <span class="todo-complete">complete</span>
+                <span class="todo-delete">incomplete</span>
+            </div>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

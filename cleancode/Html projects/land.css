@@ -1,0 +1,27 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  .navbar {
+    background-color: #ffffff;
+  }
+  
+  .container {
+    margin-top: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .btn-primary {
+    background-color: #fb5607;
+    border-color: #fb5607;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff793f;
+    border-color: #ff793f;
+  }
+  

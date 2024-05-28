@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main{
+        height:100vh;
+        width: 100%;
+        background-color: rgb(222, 205, 255);
+        border: 1px solid red;
+    }
+</style>
+<body>
+    <div id="main">
+        <div class="submain"></div>
+        <button id="btn" onclick="fun">switch_mode</button>
+    </div>
+</body>
+</html>
+<script>
+    let button=document.getElementById("btn");
+    let mode=true;
+    button.addEventListener("click",function()
+    {
+        let element=document.getElementById("main");
+        if(mode){
+            element.style.backgroundColor="white";
+            button.innerHTML="swap to night mode";
+            mode=!mode;
+        }else{
+            element.style.backgroundColor="black";
+            button.innerHTML="swap to night mode";
+            mode=!mode;
+        }
+
+    })
+</script>

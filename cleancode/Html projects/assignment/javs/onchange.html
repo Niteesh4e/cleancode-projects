@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country and Cities Selection</title>
+</head>
+<body>
+    <label for="countrySelect">Select a Country:</label>
+    <select id="countrySelect" onchange="populateCities()">
+        <option value="">Select Country</option>
+    </select>
+
+    <label for="citySelect">Select a City:</label>
+    <select id="citySelect">
+        <option value="">Select City</option>
+    </select>
+
+    <script>
+        let data = [
+            {
+                country: "India",
+                cities: ["Mumbai", "Bangalore"],
+                capital: "Delhi",
+            },
+            {
+                country: "America",
+                cities: ["New York", "Miami"],
+                capital: "Washington DC",
+            },
+            {
+                country: "Pakistan",
+                cities: ["Lahore", "Quetta"],
+                capital: "Islamabad",
+            },
+            {
+                country: "South Africa",
+                cities: ["Cape Town", "Johannesburg"],
+                capital: "Pretoria",
+            },
+            {
+                country: "Australia",
+                cities: ["Perth", "Sydney", "Hobart"],
+                capital: "Melbourne",
+            },
+        ];
+
+        function populateCountries() {
+            let countrySelect = document.getElementById("countrySelect");
+
+            data.forEach(function(item) {
+                let option = document.createElement("option");
+                option.text = item.country;
+                countrySelect.add(option);
+            });
+        }
+
+        
+        
+       
+        populateCountries();
+    </script>
+</body>
+</html>

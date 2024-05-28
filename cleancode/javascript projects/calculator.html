@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="outline">
+        <div class="calculator">
+            <form >
+                <div class="dis">
+                    <input type="text" name="display" id="display">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="clearDisplay()" id="sign">
+                    <input type="button" value="DE" onclick="deleteLastChar()" id="sign">
+                    <input type="button" value="." onclick="appendValue('.')">
+                    <input type="button" value="/" onclick="appendValue('/')">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="appendValue('7')">
+                    <input type="button" value="8" onclick="appendValue('8')">
+                    <input type="button" value="9" onclick="appendValue('9')">
+                    <input type="button" value="*" onclick="appendValue('*')" id="sign">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="appendValue('4')">
+                    <input type="button" value="5" onclick="appendValue('5')">
+                    <input type="button" value="6" onclick="appendValue('6')">
+                    <input type="button" value="-" onclick="appendValue('-')" id="sign">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="appendValue('1')">
+                    <input type="button" value="2" onclick="appendValue('2')">
+                    <input type="button" value="3" onclick="appendValue('3')">
+                    <input type="button" value="+" onclick="appendValue('+')" id="sign">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="appendValue('00')">
+                    <input type="button" value="0" onclick="appendValue('0')">
+                    <input type="button" value="=" onclick="calculate()" id="sign">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function deleteLastChar() {
+            var display = document.getElementById('display');
+            display.value = display.value.slice(0, -1);
+        }
+
+        function appendValue(val) {
+            document.getElementById('display').value += val;
+        }
+
+        function calculate() {
+            var display = document.getElementById('display');
+            var expression = display.value;
+            var result = eval(expression); // This could be improved to handle various operations and edge cases.
+            display.value = result;
+        }
+    </script>
+</body>
+</html>
